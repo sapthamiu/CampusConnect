@@ -1,0 +1,102 @@
+@tailwind utilities;
+@import "tailwindcss/preflight";
+
+body{
+    animation: fadeIn 1s forwards;
+    font-family: 'Poppins', sans-serif;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+header .text-lg{
+    font-size: 1.5rem;
+}
+header{
+    overflow: visible;
+    height: auto;
+    min-height: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.font-semibold{
+    font-weight: 600;
+}
+.event:hover{
+    /* background-color: #0affe2; */
+    z-index: 1;
+    transform: scale(1.1);
+}
+
+.event{
+    /* background-color: #fbcaef; */
+    color: white;
+    text-align: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+details{
+    display: block;
+}
+.category{
+    overflow: visible;
+}
+summary{
+
+    background: #0affe2;
+    color: #000038;
+    padding: 8px;
+    z-index: 10;
+    position: relative;
+}
+
+#social{
+    color: #ffffff;
+}
+
+ul.contact-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.calendar_main{
+    padding-top: 100px;
+}
+
+.calendar, .calendar_wrapper{
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+button, details{
+    cursor: pointer;
+}
+
+.h-10{
+    height: 1.5rem;
+}
+
+#calendar-body tr{
+    gap: 10px;
+}
+
+.fixed{
+    z-index: 100;
+}
+.hidden{
+    display: none;
+}
+/* table{
+    width: 100%;
+    border-collapse: collapse;
+}
+td, th{
+    width: calc(100%/10);
+    text-align: center;
+} */

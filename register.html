@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="./dest/output.css">
+</head>
+<body class="bg-[#000038] text-white pt-20 mx-0 px-0 opacity-0 overflow-x-hidden">
+    <header class="fixed top-0 left-0 w-full bg-[#000038D0] pt-4 pr-8 flex justify-between items-center shadow-md z-50 mx-4">
+        <div class="flex items-center gap-2">
+            <a href="index.html" class="logo mt-0 mr-4 flex items-center">
+                <img src="./src/logo.jpg" alt="logo" class="w-12 h-12 rounded-full border-2 border-[#5ac2fc]">
+            </a>
+            <h1 class="text-lg font-semibold text-[#fbcaef]">Campus Connect</h1>
+        </div>
+        <nav class="flex gap-4 flex-wrap">
+            <a href="index.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Home</a>
+            <a href="calendar.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Event Calendar</a>
+            <a href="#contact" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container pt-24 max-w-sm mx-auto bg-[#0affe2] shadow-md rounded-xl p-6 mt-8">
+            <h2 class="text-center mb-4 text-2xl font-semibold text-[#fbcaef]">Register for the Event</h2>
+            <form action="submit_registration.html" onsubmit="handleSubmit(event)" class="flex flex-col space-y-4">
+               <div>
+                    <label for="name" class="block text-md mb-1 text-[#5ac2fc]">Full Name:</label>
+                    <input type="text" id="name" name="name" class="w-full text-md h-10 p-2 mb-4 border border-[#000038] rounded-lg text-[#000038] focus:outline-none focus:ring-2 focus:ring-[#5ac2fc]" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-md mb-1 text-[#5ac2fc]">Email Address:</label>
+                    <input type="email" id="email" name="email" class="w-full text-md h-10 p-2 mb-4 border border-[#000038] rounded-lg text-[#000038] focus:outline-none focus:ring-2 focus:ring-[#5ac2fc]" required>
+                </div>
+                <div>
+                    <label for="event"class="block text-md mb-1 text-[#5ac2fc]">Event Name:</label>
+                    <input type="text" id="event" name="name" class="w-full text-md h-10 p-2 mb-4 border border-[#000038] rounded-lg text-[#000038] focus:outline-none focus:ring-2 focus:ring-[#5ac2fc]" readonly>
+                </div>
+                <button type="submit" class="bg-[#5ac2fc] text-[#000038] p-3 rounded-lg cursor-pointer text-lg transition-all duration-300 ease-in-out hover:text-[#5ac2fc] hover:bg-[#000038]">Submit</button>
+            </form>
+        </div>
+    </main>
+    <footer class="bg-[#000038] text-center p-6 mt-12 shadow-lg">
+        <div id="contact">
+            <h2 class="text-[#5ac2fc] text-xl">Contact Us</h2>
+            <ul class="contact-list flex justify-center gap-6 mt-4">
+                <li id="email"><a href="mailto:email@manipal.edu" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]">email@manipal.edu</a></li>
+                <li id="insta"><a href="https://www.meta.com" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]" target="_blank">@instagrammer</a></li>
+                <li id="twitter"><a href="https://www.x.com" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]" target="_blank">@tweeter</a></li>
+            </ul>
+            <p class="text-sm text-gray-400 mt-4">&copy; 2025 Campus Connect. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="register.js"></script>
+</body>
+</html>

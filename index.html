@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect</title>
+    <link rel="stylesheet" href="./dest/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body class="bg-[#000038] text-white pt-24 mx-0 px-0 opacity-0 overflow-x-hidden">
+    <header class="fixed top-0 left-0 w-full bg-[#000038D0] pt-4 pr-8 flex justify-between items-center shadow-lg z-50 mx-4">
+        <div class="flex items-center gap-2">
+            <a href="index.html" class="logo mt-0 mr-4 flex items-center">
+                <img src="./src/logo.jpg" alt="logo" class="w-12 h-12 rounded-full border-2 border-[#5ac2fc]">
+            </a>
+            <h1 class="text-lg md: text-xl font-semibold text-[#fbcaef]">Campus Connect</h1>
+        </div>
+        <nav class="flex gap-4 flex-wrap">
+            <a href="index.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Home</a>
+            <a href="calendar.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Event Calendar</a>
+            <a href="#contact" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Contact</a>
+        </nav>
+    </header>
+    <main class="w-full">
+        <div class="mx-auto px-0">
+            <section class="relative bg-cover bg-center w-full min-h-screen flex flex-col justify-center items-center text-center" style="background-image: url('./src/hero.jpg');">
+                <div class="hero absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative z-10 max-w-3xl">
+                    <h1 class="text-6xl mb-4 font-bold text-[#fbcaef]">CAMPUS CONNECT</h1>
+                    <p class="text-[#fbcaef] text-lg max-w-xl relative z-10 mt-4 mx-auto">Discover exciting workshops, seminars, and social gatherings on campus. Join us and explore the events!</p>
+                    <a href="calendar.html" class="btn mb-4 px-6 py-2 bg-[#5ac2fc] text-[#000038] rounded-lg shadow-md hover:bg-[#000038] hover:text-[#5ac2fc] transition no-underline">Explore Now!</a>
+                </div>
+            </section>
+            <section class="flex flex-wrap justify-center gap-6 mt-12 px-4">
+                <div class="card bg-[#fbcaef] text-[#000038] p-6 rounded-lg shadow-lg max-w-sm text-center transform hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold">Workshops</h3>
+                    <p class="mt-2">Enhance your skills by attending hands-on workshops.</p>
+                    <a href="calendar.html" class="mb-4 inline-block bg-[#5ac2fc] text-[#000038] px-4 py-2 rounded-lg hover:bg-[#000038] hover:text-[#5ac2fc] no-underline transition">Register</a>
+                </div>
+                <div class="card bg-[#fbcaef] text-[#000038] p-6 rounded-lg shadow-lg max-w-sm text-center transform hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold">Seminars</h3>
+                    <p class="mt-2">Learn from industry experts at our seminar.</p>
+                    <a href="calendar.html" class="mb-4 inline-block bg-[#5ac2fc] text-[#000038] px-4 py-2 rounded-lg hover:bg-[#000038] hover:text-[#5ac2fc] no-underline transition">Register</a>
+                </div>
+                <div class="card bg-[#fbcaef] text-[#000038] p-6 rounded-lg shadow-lg max-w-sm text-center transform hover:-translate-y-2 transition">
+                    <h3 class="text-xl font-semibold">Social gatherings</h3>
+                    <p class="mt-2">Network and have fun at social events.</p>
+                    <a href="calendar.html" class="mb-4 inline-block bg-[#5ac2fc] text-[#000038] px-4 py-2 rounded-lg hover:bg-[#000038] hover:text-[#5ac2fc] no-underline transition">Register</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="bg-[#000038] text-center p-6 mt-12 shadow-lg">
+        <div id="contact">
+            <h2 class="text-[#5ac2fc] text-xl">Contact Us</h2>
+            <ul class="flex contact-list justify-center gap-6 mt-4">
+                <li id="email"><a href="mailto:email@manipal.edu" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]">email@manipal.edu</a></li>
+                <li id="insta"><a href="https://www.meta.com" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]" target="_blank">@instagrammer</a></li>
+                <li id="twitter"><a href="https://www.x.com" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]" target="_blank">@tweeter</a></li>
+            </ul>
+            <p class="text-sm text-gray-400 mt-4">&copy; 2025 Campus Connect. All rights reserved.</p>
+        </div>
+    </footer>
+    </script>
+</body>
+</html>

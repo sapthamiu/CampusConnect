@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect</title>
+    <link rel="stylesheet" href="./dest/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body class="bg-[#000038] text-white pt-24 mx-0 px-0 opacity-0 overflow-x-hidden">
+    <header class="fixed top-0 left-0 w-full bg-[#000038D0] pt-4 pr-8 flex justify-between items-center shadow-lg z-50 mx-4">
+        <div class="flex items-center gap-2">
+            <a href="index.html" class="logo mt-0 mr-4 flex items-center">
+                <img src="./src/logo.jpg" alt="logo" class="w-12 h-12 rounded-full border-2 border-[#5ac2fc]">
+            </a>
+            <h1 class="text-lg md: text-xl font-semibold text-[#fbcaef]">Campus Connect</h1>
+        </div>
+        <nav class="flex gap-4 flex-wrap">
+            <a href="index.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Home</a>
+            <a href="calendar.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Event Calendar</a>
+            <a href="#contact" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Contact</a>
+        </nav>
+    </header>
+    <main class=" bg-[#000038]">
+        <h1 class="text-center mt-25 text-10 text-[#fbcaef]">Thank You for Registering!</h1>
+        <section class="text-center px-8 py-4 shadow-md rounded-lg mx-5 my-auto">
+            <h2 class="text-md text-[#5ac2fc]">Your registration has been successfully submitted.</h2>
+            <p class="text-md " id="filler"></p>
+            <p class="text-md ">If you need to register for another event, you can go back to the <a href="calendar.html" class="no-underline text-[#fbcaef] hover:text[#5ac2fc] ">Event Calendar</a> or visit the <a href="index.html" class="no-underline text-[#fbcaef] hover:text-[#5ac2fc] ">Home Page</a>.</p>
+        </section>
+    </main>
+    
+    <footer class="bg-[#000038] text-center p-6 mt-12 shadow-lg">
+        <div id="contact">
+            <h2 class="text-[#5ac2fc] text-xl">Contact Us</h2>
+            <ul class="flex contact-list justify-center gap-6 mt-4">
+                <li id="email"><a href="mailto:email@manipal.edu" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]">email@manipal.edu</a></li>
+                <li id="insta"><a href="https://www.meta.com" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]" target="_blank">@instagrammer</a></li>
+                <li id="twitter"><a href="https://www.x.com" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]" target="_blank">@tweeter</a></li>
+            </ul>
+            <p class="text-sm text-gray-400 mt-4">&copy; 2025 Campus Connect. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="confirmation.js"></script>
+</body>
+</html>
