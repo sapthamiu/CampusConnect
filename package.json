@@ -29,5 +29,13 @@
     "source-map-js": "^1.2.1",
     "update-browserslist-db": "^1.1.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapthamiu/CampusConnect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sapthamiu/CampusConnect/issues"
+  },
+  "homepage": "https://github.com/sapthamiu/CampusConnect#readme",
   "description": ""
 }

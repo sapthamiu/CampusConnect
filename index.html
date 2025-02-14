@@ -11,38 +11,39 @@
     <header class="fixed top-0 left-0 w-full bg-[#000038D0] pt-4 pr-8 flex justify-between items-center shadow-lg z-50 mx-4">
         <div class="flex items-center gap-2">
             <a href="index.html" class="logo mt-0 mr-4 flex items-center">
-                <img src="./src/logo.jpg" alt="logo" class="w-12 h-12 rounded-full border-2 border-[#5ac2fc]">
+                <img src="./src/logo.jpg" alt="logo" class="w-10 h-10 sm:h-12 sm:w-12 rounded-full border-2 border-[#5ac2fc]">
             </a>
-            <h1 class="text-lg md: text-xl font-semibold text-[#fbcaef]">Campus Connect</h1>
+            <h1 class="text-lg sm:text-xl font-semibold text-[#fbcaef]">Campus Connect</h1>
         </div>
-        <nav class="flex gap-4 flex-wrap">
+        <button class="block md:hidden text-[#fbcaef]" id="menu-toggle"> ☰ </button>
+        <nav class="hidden md:flex gap-4 flex-wrap" id="navbar">
             <a href="index.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Home</a>
             <a href="calendar.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Event Calendar</a>
             <a href="#contact" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Contact</a>
         </nav>
     </header>
     <main class="w-full">
-        <div class="mx-auto px-0">
+        <div class="mx-auto px-4">
             <section class="relative bg-cover bg-center w-full min-h-screen flex flex-col justify-center items-center text-center" style="background-image: url('./src/hero.jpg');">
                 <div class="hero absolute inset-0 bg-black bg-opacity-50"></div>
-                <div class="relative z-10 max-w-3xl">
-                    <h1 class="text-6xl mb-4 font-bold text-[#fbcaef]">CAMPUS CONNECT</h1>
-                    <p class="text-[#fbcaef] text-lg max-w-xl relative z-10 mt-4 mx-auto">Discover exciting workshops, seminars, and social gatherings on campus. Join us and explore the events!</p>
-                    <a href="calendar.html" class="btn mb-4 px-6 py-2 bg-[#5ac2fc] text-[#000038] rounded-lg shadow-md hover:bg-[#000038] hover:text-[#5ac2fc] transition no-underline">Explore Now!</a>
+                <div class="relative z-10 max-w-3xl px-4">
+                    <h1 class="text-4xl sm:text-6xl mb-4 font-bold text-[#fbcaef]">CAMPUS CONNECT</h1>
+                    <p class="text-[#fbcaef] text-md sm:text-lg max-w-xl relative z-10 mt-4 mx-auto">Discover exciting workshops, seminars, and social gatherings on campus. Join us and explore the events!</p>
+                    <a href="calendar.html" class="btn mb-4 px-4 sm:px-6 py-2 bg-[#5ac2fc] text-[#000038] rounded-lg shadow-md hover:bg-[#000038] hover:text-[#5ac2fc] transition no-underline">Explore Now!</a>
                 </div>
             </section>
             <section class="flex flex-wrap justify-center gap-6 mt-12 px-4">
-                <div class="card bg-[#fbcaef] text-[#000038] p-6 rounded-lg shadow-lg max-w-sm text-center transform hover:-translate-y-2 transition">
+                <div class="card bg-[#fbcaef] text-[#000038] p-6 rounded-lg shadow-lg max-w-sm text-center transform hover:-translate-y-2 transition w-full sm:w-auto">
                     <h3 class="text-xl font-semibold">Workshops</h3>
                     <p class="mt-2">Enhance your skills by attending hands-on workshops.</p>
                     <a href="calendar.html" class="mb-4 inline-block bg-[#5ac2fc] text-[#000038] px-4 py-2 rounded-lg hover:bg-[#000038] hover:text-[#5ac2fc] no-underline transition">Register</a>
                 </div>
-                <div class="card bg-[#fbcaef] text-[#000038] p-6 rounded-lg shadow-lg max-w-sm text-center transform hover:-translate-y-2 transition">
+                <div class="card bg-[#fbcaef] text-[#000038] p-6 rounded-lg shadow-lg max-w-sm text-center transform hover:-translate-y-2 transition w-full sm:w-auto">
                     <h3 class="text-xl font-semibold">Seminars</h3>
                     <p class="mt-2">Learn from industry experts at our seminar.</p>
                     <a href="calendar.html" class="mb-4 inline-block bg-[#5ac2fc] text-[#000038] px-4 py-2 rounded-lg hover:bg-[#000038] hover:text-[#5ac2fc] no-underline transition">Register</a>
                 </div>
-                <div class="card bg-[#fbcaef] text-[#000038] p-6 rounded-lg shadow-lg max-w-sm text-center transform hover:-translate-y-2 transition">
+                <div class="card bg-[#fbcaef] text-[#000038] p-6 rounded-lg shadow-lg max-w-sm text-center transform hover:-translate-y-2 transition w-full sm:w-auto">
                     <h3 class="text-xl font-semibold">Social gatherings</h3>
                     <p class="mt-2">Network and have fun at social events.</p>
                     <a href="calendar.html" class="mb-4 inline-block bg-[#5ac2fc] text-[#000038] px-4 py-2 rounded-lg hover:bg-[#000038] hover:text-[#5ac2fc] no-underline transition">Register</a>
@@ -61,6 +62,12 @@
             <p class="text-sm text-gray-400 mt-4">&copy; 2025 Campus Connect. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+        menuToggle.addEventListener('click', ()=>{
+            navbar.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>
