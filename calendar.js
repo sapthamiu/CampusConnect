@@ -34,7 +34,7 @@ function generateCalendar(month, year){
         //create days
         for(let col = 0 ; col < 7; col++){
             if((row === 0 && col < firstDay) || dayCount > daysInMonth)
-                week += '<td class="my-4 pt-4"></td>'; //empty cell
+                week += '<td class="my-4 pt-4 gap-y-4"></td>'; //empty cell
             else{
                 const curDate = formatDate(year, month, dayCount);
                 const event = events.find(e => e.date === curDate);
@@ -53,11 +53,11 @@ function generateCalendar(month, year){
                         default: 
                             eventColor = '#000038';
                     }
-                    week += `<td class="event my-4 pt-4 text-sm text-[#000038] border border-gray-300 
+                    week += `<td class="event gap-y-4 my-4 pt-4 text-sm text-[#000038] border border-gray-300 
                              transition-transform transform hover:scale-105 cursor-pointer 
                             rounded-md" title="${event.title}" onclick="redirectToReg('${event.title}', '${event.date}')" style="background-color: ${eventColor};">${dayCount}</td>`;
                 }else 
-                    week += `<td class="py-4">${dayCount}</td>`;
+                    week += `<td class="py-4 gap-y-4">${dayCount}</td>`;
                 dayCount++;
             }
         }

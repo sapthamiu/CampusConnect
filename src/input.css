@@ -78,8 +78,9 @@ button, details{
     cursor: pointer;
 }
 
-.h-10{
-    height: 1.5rem;
+#prev-btn, #next-btn{
+    max-width: 100%;
+    border-radius: 1.5rem;
 }
 
 #calendar-body tr{

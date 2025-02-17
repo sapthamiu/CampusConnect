@@ -4,37 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
+    <script src="https://kit.fontawesome.com/b97a1105aa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./dest/output.css">
 </head>
-<body class="bg-[#000038] text-white pt-20 mx-0 px-0 opacity-0 overflow-x-hidden">
-    <header class="fixed top-0 left-0 w-full bg-[#000038D0] pt-4 pr-8 flex justify-between items-center shadow-md z-50 mx-4">
+<body class="bg-[#000038] text-white pt-24 mx-0 px-0 opacity-0 overflow-x-hidden">    
+    <header class="fixed top-0 left-0 w-full bg-[#000038D0] pt-4 px-4 flex justify-between items-center shadow-xl z-50">
         <div class="flex items-center gap-2">
             <a href="index.html" class="logo mt-0 mr-4 flex items-center">
-                <img src="./src/logo.jpg" alt="logo" class="w-12 h-12 rounded-full border-2 border-[#5ac2fc]">
+                <img src="./src/logo.jpg" alt="Campus Connect logo" class="w-12 h-12 rounded-full border-2 border-[#5ac2fc]">
             </a>
-            <h1 class="text-lg font-semibold text-[#fbcaef]">Campus Connect</h1>
+            <h1 class=" text-base md:text-lg font-semibold text-[#fbcaef]">Campus Connect</h1>
         </div>
-        <nav class="flex gap-4 flex-wrap">
-            <a href="index.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Home</a>
-            <a href="calendar.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Event Calendar</a>
-            <a href="#contact" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Contact</a>
+        <button id="hamburger" aria-label="Toggle menu" class="block md:hidden text-[#5ac2fc] bg-[#000038] border-none text-2xl focus:outline-none transition-transform duration-300 transform hover:scale-110">
+            <i class="fa-solid fa-bars text-2xl cursor-pointer text-[#5ac2fc] md:hidden"></i>
+        </button>
+        <nav id="menu" class="hidden md:flex flex-col gap-2 md:flex-row md:gap-4 md:space-y-0 space-y-2 bg-[#000038D0] md:bg-transparent rounded-lg shadow-xl md:shadow-none p-4 absolute right-8 top-16 md:top-0 z-40 transition-all duration-500 ease-in-out">
+            <a href="index.html" class="block text-[#fbcaef] px-2 py-1 md:py-4 hover:text-[#5ac2fc] no-underline transition">Home</a>
+            <a href="calendar.html" class="block text-[#fbcaef] px-2 py-1 md:py-4 hover:text-[#5ac2fc] no-underline transition">Event Calendar</a>
+            <a href="#contact" class="block text-[#fbcaef] px-2 py-1 md:py-4 hover:text-[#5ac2fc] no-underline transition">Contact</a>
         </nav>
     </header>
-    <main class="calendar_main">
+    <main class="calendar_main w-screen my-auto">
         <div class="container mx-auto py-8">
             <h2 class="text-2xl text-center font-bold mb-6 text-[#fbcaef]">Event Calendar</h2>
             <div class="w-full max-w-[700px] mx-auto mb-4">
             <div class="flex items-center justify-between w-full">
-                <button type="button" id="prev-btn" class="w-1/4 bg-[#5ac2fc] text-[#000038] py-2 rounded-lg shadow-md hover:bg-[#000038] hover:text-[#5ac2fc]">                  
+                <button type="button" id="prev-btn" class="py-2 mx-5 px-3 bg-[#5ac2fc] text-[#000038] py-2 border-none rounded-lg shadow-md hover:bg-[#000038] hover:text-[#5ac2fc]">                  
                     &lt; Previous
                 </button>
                 <h2 id="month-name" class="text-2xl font-bold text-[#fbcaef] text-center w-1/2"></h2>
-                <button type="button" id="next-btn" class="w-1/4 bg-[#5ac2fc] text-[#000038] py-2 rounded-lg hover:bg-[#000038] hover:text-[#5ac2fc]">
+                <button type="button" id="next-btn" class="w-1/4 bg-[#5ac2fc] text-[#000038] py-2 border-none  rounded-lg hover:bg-[#000038] hover:text-[#5ac2fc]">
                     Next &gt;
                 </button>
             </div>
             </div>
-            <table class="calendar w-full table-fixed shadow-md rounded-md border-collapse">
+            <table class="calendar w-full table-fixed shadow-md rounded-2xl border-collapse">
                 <thead class="mb-4">
                     <tr class="text-center bg-[#fbcaef] text-[#000038]">
                         <th class="w-1/7 py-2">Sun</th>
@@ -57,23 +61,23 @@
                 <summary class="text-xl cursor-pointer bg-[#5ac2fc] px-4 py-2 text-[#000038] rounded-md">
                     Workshops
                 </summary>
-                <ul id="workshops" class="p-4"></ul>
+                <ul id="workshops" class="p-4 list-none"></ul>
             </details>
             <details class="category mt-4">
                 <summary class="text-xl cursor-pointer bg-[#0affe2] px-4 py-2 text-[#000038] rounded-md">
                     Social Gatherings
                 </summary>
-                <ul id="social" class="p-4"></ul>
+                <ul id="social" class="p-4 list-none"></ul>
             </details>
             <details class="category mt-4">
                 <summary class="text-xl cursor-pointer bg-[#fbcaef] px-4 py-2 text-[#000038] rounded-md">
                     Seminars
                 </summary>
-                <ul id="seminars" class="p-4"></ul>
+                <ul id="seminars" class="p-4 list-none"></ul>
             </details>
         </section>
     </main>
-    <div id="event-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div id="event-modal" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden">
         <div class="bg-white text-[#5ac2fc] w-[90%] max-w-[500px] rounded-lg p-6 relative shadow-lg">
             <h2 class="text-2xl font-bold mb-6 text-center">Add Event</h2>
             <form id="event-form" class="space-y-4">
@@ -94,7 +98,7 @@
     <footer class="bg-[#000038] text-center p-6 mt-12 shadow-lg">
         <div id="contact">
             <h2 class="text-[#5ac2fc] text-xl">Contact Us</h2>
-            <ul class="contact-list flex justify-center gap-6 mt-4">
+            <ul class="flex flex-col items-center gap-4 contact-list md:flex-row md:justify-center md:gap-6 mt-4">
                 <li id="email"><a href="mailto:email@manipal.edu" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]">email@manipal.edu</a></li>
                 <li id="insta"><a href="https://www.meta.com" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]" target="_blank">@instagrammer</a></li>
                 <li id="twitter"><a href="https://www.x.com" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]" target="_blank">@tweeter</a></li>
@@ -103,5 +107,12 @@
         </div>
     </footer>
     <script src="calendar.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger')
+        const menu = document.getElementById('menu')
+        hamburger.addEventListener('click',() =>{
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>

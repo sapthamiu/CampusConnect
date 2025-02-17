@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Connect</title>
+    <script src="https://kit.fontawesome.com/b97a1105aa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./dest/output.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
 </head>
 <body class="bg-[#000038] text-white pt-24 mx-0 px-0 opacity-0 overflow-x-hidden">
-    <header class="fixed top-0 left-0 w-full bg-[#000038D0] pt-4 pr-8 flex justify-between items-center shadow-lg z-50 mx-4">
+    <header class="fixed top-0 left-0 w-full bg-[#000038D0] pt-4 px-4 flex justify-between items-center shadow-lg z-50">
         <div class="flex items-center gap-2">
             <a href="index.html" class="logo mt-0 mr-4 flex items-center">
-                <img src="./src/logo.jpg" alt="logo" class="w-12 h-12 rounded-full border-2 border-[#5ac2fc]">
+                <img src="./src/logo.jpg" alt="Campus Connect logo" class="w-12 h-12 rounded-full border-2 border-[#5ac2fc]">
             </a>
-            <h1 class="text-lg md: text-xl font-semibold text-[#fbcaef]">Campus Connect</h1>
+            <h1 class=" text-base md:text-lg font-semibold text-[#fbcaef]">Campus Connect</h1>
         </div>
-        <nav class="flex gap-4 flex-wrap">
-            <a href="index.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Home</a>
-            <a href="calendar.html" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Event Calendar</a>
-            <a href="#contact" class="text-[#fbcaef] px-2 py-4 hover:text-[#5ac2fc] no-underline transition">Contact</a>
+        <button id="hamburger" aria-label="Toggle menu" class="block md:hidden text-[#5ac2fc] bg-[#000038] border-none text-2xl focus:outline-none transition-transform duration-300 transform hover:scale-110">
+            <i class="fa-solid fa-bars text-2xl cursor-pointer text-[#5ac2fc] md:hidden"></i>
+        </button>
+        <nav id="menu" class="hidden md:flex flex-col gap-2 md:flex-row md:gap-4 md:space-y-0 space-y-2 bg-[#000038D0] md:bg-transparent rounded-lg shadow-lg p-4 absolute right-8 top-16 md:top-0 z-40 transition-all duration-500 ease-in-out tranform md:transform-none">
+            <a href="index.html" class="block text-[#fbcaef] px-2 py-1 md:py-4 hover:text-[#5ac2fc] no-underline transition">Home</a>
+            <a href="calendar.html" class="block text-[#fbcaef] px-2 py-1 md:py-4 hover:text-[#5ac2fc] no-underline transition">Event Calendar</a>
+            <a href="#contact" class="block text-[#fbcaef] px-2 py-1 md:py-4 hover:text-[#5ac2fc] no-underline transition">Contact</a>
         </nav>
     </header>
-    <main class=" bg-[#000038]">
+    <main class="w-screen bg-[#000038]">
         <h1 class="text-center mt-25 text-10 text-[#fbcaef]">Thank You for Registering!</h1>
         <section class="text-center px-8 py-4 shadow-md rounded-lg mx-5 my-auto">
             <h2 class="text-md text-[#5ac2fc]">Your registration has been successfully submitted.</h2>
@@ -33,7 +37,7 @@
     <footer class="bg-[#000038] text-center p-6 mt-12 shadow-lg">
         <div id="contact">
             <h2 class="text-[#5ac2fc] text-xl">Contact Us</h2>
-            <ul class="flex contact-list justify-center gap-6 mt-4">
+            <ul class="flex flex-col items-center gap-4 contact-list md:flex-row md:justify-center md:gap-6 mt-4">
                 <li id="email"><a href="mailto:email@manipal.edu" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]">email@manipal.edu</a></li>
                 <li id="insta"><a href="https://www.meta.com" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]" target="_blank">@instagrammer</a></li>
                 <li id="twitter"><a href="https://www.x.com" class="hover:text-[#5ac2fc] transition no-underline text-[#fbcaef]" target="_blank">@tweeter</a></li>
@@ -41,6 +45,13 @@
             <p class="text-sm text-gray-400 mt-4">&copy; 2025 Campus Connect. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger')
+        const menu = document.getElementById('menu')
+        hamburger.addEventListener('click',() =>{
+            menu.classList.toggle('hidden');
+        });
+    </script>
     <script src="confirmation.js"></script>
 </body>
 </html>
