@@ -38,6 +38,14 @@
   top: 4rem;
 }
 
+.right-4{
+  right: 1rem;
+}
+
+.top-4{
+  top: 1rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -48,6 +56,10 @@
 
 .z-50{
   z-index: 50;
+}
+
+.m-0{
+  margin: 0px;
 }
 
 .mx-2{
@@ -86,6 +98,10 @@
 
 .mt-6{
   margin-top: 1.5rem;
+}
+
+.ml-auto{
+  margin-left: auto;
 }
 
 .block{
@@ -243,6 +259,10 @@
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-transparent{
+  background-color: transparent;
+}
+
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
@@ -261,6 +281,10 @@
 
 .p-6{
   padding: 1.5rem;
+}
+
+.p-0{
+  padding: 0px;
 }
 
 .px-0{
@@ -299,6 +323,14 @@
 
 .pt-4{
   padding-top: 1rem;
+}
+
+.pl-2{
+  padding-left: 0.5rem;
+}
+
+.pb-2{
+  padding-bottom: 0.5rem;
 }
 
 .text-center{
@@ -564,6 +596,11 @@ td, th{
     top: 0px;
   }
 
+  .md\:mx-2{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
   .md\:flex{
     display: flex;
   }
@@ -605,6 +642,24 @@ td, th{
   .md\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .md\:px-2{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .md\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:pt-24{
+    padding-top: 6rem;
+  }
+
+  .md\:pt-4{
+    padding-top: 1rem;
   }
 
   .md\:text-lg{

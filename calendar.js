@@ -53,7 +53,7 @@ function generateCalendar(month, year){
                         default: 
                             eventColor = '#000038';
                     }
-                    week += `<td class="event gap-y-4 my-4 pt-4 text-sm text-[#000038] border border-gray-300 
+                    week += `<td class="event gap-y-4 my-4 p-4 text-sm text-[#000038] border border-gray-300 
                              transition-transform transform hover:scale-105 cursor-pointer 
                             rounded-md" title="${event.title}" onclick="redirectToReg('${event.title}', '${event.date}')" style="background-color: ${eventColor};">${dayCount}</td>`;
                 }else 
