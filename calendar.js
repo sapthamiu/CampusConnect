@@ -211,5 +211,6 @@ function checkReminders(){
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
+    checkReminders();
     setInterval(checkReminders, 60*60*1000);
 });
