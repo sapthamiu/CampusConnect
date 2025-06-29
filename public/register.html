@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
     <script src="https://kit.fontawesome.com/b97a1105aa.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./dest/output.css">
+    <link rel="stylesheet" href="../styles/output.css">
 </head>
 <body class="bg-[#000038] text-white m-0 p-0 md:pt-24 opacity-0 overflow-x-hidden">
     <header class="fixed top-0 left-0 w-full bg-[#000038D0] pl-2 pb-2 pt-4 md:px-4 flex justify-between items-center shadow-lg z-50">
         <div class="flex items-center gap-2">
             <a href="index.html" class="logo mt-0 mr-4 flex items-center">
-                <img src="./src/logo.jpg" alt="Campus Connect logo" class="w-12 h-12 rounded-full border-2 border-[#5ac2fc]">
+                <img src="../assets/logo.jpg" alt="Campus Connect logo" class="w-12 h-12 rounded-full border-2 border-[#5ac2fc]">
             </a>
             <h1 class=" text-base md:text-lg font-semibold text-[#fbcaef]">Campus Connect</h1>
         </div>
@@ -27,7 +27,7 @@
     <main class="w-screen">
         <div class="container pt-24 max-w-sm mx-auto bg-[#0affe2] shadow-md rounded-xl p-6 mt-8">
             <h2 class="text-center mb-4 text-2xl font-semibold text-[#fbcaef]">Register for the Event</h2>
-            <form action="submit_registration.html" onsubmit="handleSubmit(event)" class="flex flex-col space-y-4">
+            <form onsubmit="handleSubmit(event)" class="flex flex-col space-y-4">
                <div>
                     <label for="name" class="block text-md mb-1 text-[#5ac2fc]">Full Name:</label>
                     <input type="text" id="name" name="name" class="w-full text-md h-10 p-2 mb-4 border border-[#000038] rounded-lg text-[#000038] focus:outline-none focus:ring-2 focus:ring-[#5ac2fc]" required>
@@ -62,6 +62,6 @@
             menu.classList.toggle('hidden');
         });
     </script>
-    <script src="register.js"></script>
+    <script src="../scripts/register.js"></script>
 </body>
 </html>

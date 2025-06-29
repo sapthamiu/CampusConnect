@@ -9,5 +9,5 @@ window.addEventListener('load', function(){
 
 function handleSubmit(event){
     event.preventDefault();
-    window.location.href = "confirmation.html";
+    window.location.href = "../public/confirmation.html";
 }

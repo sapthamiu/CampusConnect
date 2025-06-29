@@ -117,7 +117,7 @@ document.getElementById('next-btn').addEventListener('click', () =>{
 function redirectToReg(eventTitle, eventDate){
     localStorage.setItem('selectedEvent', eventTitle);
     localStorage.setItem('selectedDate', eventDate);
-    window.location.href = 'register.html';
+    window.location.href = '../public/register.html';
 }
 
 loadEvents();
